@@ -14,7 +14,6 @@ except Exception:
     LHandler.warning("Inject folder created.")
     print("Restarting injector.py")
     os.system("python util/injector.py")
-    os.mkdir("Inject")
 
 def injinit():
     try:
