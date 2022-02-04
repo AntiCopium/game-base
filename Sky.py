@@ -12,8 +12,13 @@ from util import injector
 
 
 def main():
+    try:
+        inj = os.listdir("Inject")
+    except Exception as e:
+        print(e)
+
     injaccept = input(
-        "Would you like to inject files? (y/n) " + str(injector.inj)).lower()
+        "Would you like to inject files? (y/n) " + str(inj)).lower()
     if injaccept == "y":
         injector.runinj()
     elif injaccept == "yes":
