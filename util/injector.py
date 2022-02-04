@@ -7,7 +7,10 @@ import subprocess as sb
 try:    
     inj = os.listdir("Inject")
 except Exception:
+    LHandler.warning("Inject folder not found. Creating it.")
     os.mkdir("Inject")
+    time.sleep(1)
+    LHandler.warning("Inject folder created.")
     print("Restarting injector.py")
     os.system("python injector.py")
     os.mkdir("Inject")
