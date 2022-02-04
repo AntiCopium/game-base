@@ -1,6 +1,0 @@
-WARNING -> This log file resets after every run.
-WARNING -> Inject folder found. Injecting... ['hello.lua', 'rust-client.exe']
-WARNING -> Injecting hello.lua
-WARNING -> Injected hello.lua
-WARNING -> Injecting rust-client.exe
-WARNING -> Injected rust-client.exe
