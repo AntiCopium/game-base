@@ -24,8 +24,8 @@ def main():
     elif injaccept == "yes":
         injector.runinj()
     else:
-        LHandler.warning("User denied injection permission.")
         print("Injection denied successfully.")
+        LHandler.warning("User denied injection permission.")
 
 
 if __name__ == '__main__':

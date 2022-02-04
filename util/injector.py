@@ -4,24 +4,25 @@ import time
 from logger import LHandler
 import subprocess as sb
 
-
-def injinit():
-    try:
-        inj = os.listdir("Inject")
-        LHandler.warning("Inject folder found. Injecting... " + str(inj))
-    except Exception as e:
+def exception():
         print("Inject folder not found. Creating it.")
-        LHandler.warning("Inject folder not found. Creating it.")
         os.mkdir("Inject")
-        time.sleep(2)
-        LHandler.warning("Inject folder created.")
+        time.sleep(1)
         print("Restarting Sky.py")
         os.system("Sky.py")
         time.sleep(2)
 
 
+def injinit():
+    try:
+        inj = os.listdir("Inject")
+    except Exception:
+        exception()
+
+
 def runinj():
     inj = os.listdir("Inject")
+    LHandler.warning("Inject folder found. Injecting... " + str(inj))
 
     print("injector.py is starting. Injecting... \n")
     time.sleep(1)
